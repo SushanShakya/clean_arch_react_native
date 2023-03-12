@@ -1,30 +1,8 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
-import React from 'react';
 import type { PropsWithChildren } from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import { StyleSheet, Text, useColorScheme, View } from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-import { UserView } from './src/modules/user/gui/views/UserView';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
+import AuthView from './src/modules/auth/gui/views/AuthView';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -64,8 +42,12 @@ function App(): JSX.Element {
   };
 
   return (
-    <UserView />
-  );
+    <AuthView />
+  )
+
+  // return (
+  //   <UserView />
+  // );
 }
 
 const styles = StyleSheet.create({
